@@ -1,0 +1,23 @@
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 20px;
+}
+
+form {
+    margin-bottom: 50px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #ff00ae;
+}

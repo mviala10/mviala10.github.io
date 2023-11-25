@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Contadores Diarios</title>
+</head>
+<body>
+    <h1>Contadores Diarios</h1>
+    
+    <form action="/add_counter" method="post">
+        <label for="counter_name">Nombre del Contador:</label>
+        <input type="text" name="counter_name" required>
+        
+        <label for="category_name">Categoría:</label>
+        <input type="text" name="category_name" required>
+
+        <button type="submit">Agregar Contador</button>
+    </form>
+
+    <ul>
+        {% for counter in counters %}
+            <li>
+                <strong>{{ counter['name'] }}</strong> ({{ counter['category'] }}): {{ counter['value'] }}
+                <a href="{{ url_for('increment', counter_name=counter['name']) }}">Incrementar</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
