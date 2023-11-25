@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contador de Tareas</title>
+</head>
+<body>
+    <h1>Contador de Tareas</h1>
+
+    <form id="form" onsubmit="return false;">
+        <label for="category_name">Categoría:</label>
+        <input type="text" id="category_name" required>
+        <label for="counter_name">Tarea:</label>
+        <input type="text" id="counter_name" required>
+        <button onclick="addCounter()">Crear Contador</button>
+    </form>
+
+    <div id="counters">
+        <!-- Contadores se agregarán aquí dinámicamente -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
